@@ -1,4 +1,3 @@
-<?php
 
 class Walker_Categories_Widget extends Walker_Category {
 
