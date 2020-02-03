@@ -3,12 +3,6 @@
           <label for="username-a30d" class="u-label" name=""><?php _e( 'Username' ); ?></label>
           <input type="text" placeholder="<?php _e( 'Username' ); ?>" id="username-a30d" name="log" class="u-input u-input-rectangle u-none u-input-1" required="">
         </div>
-        <div class="u-form-group u-form-password">
-          <label for="password-a30d" class="u-label" name=""><?php _e( 'Password' ); ?></label>
-          <input type="password" placeholder="<?php _e( 'Password' ); ?>" id="password-a30d" name="pwd" class="u-input u-input-rectangle u-none u-input-2" required="">
-        </div>
-        <div class="u-form-checkbox u-form-group">
-          <input type="checkbox" id="checkbox-a30d" name="rememberme" value="On" class="u-field-input">
           <label for="checkbox-a30d" class="u-block-3f60-32 u-field-label" style="" name=""><?php _e( 'Remember Me' ); ?></label>
         </div>
         <div class="u-align-left u-form-group u-form-submit">
