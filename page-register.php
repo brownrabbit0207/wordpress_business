@@ -1,3 +1,4 @@
+<?php
 global $pageRegister;
 $pageRegister = true;
 $filePath = get_template_directory() . '/page-login.php';
