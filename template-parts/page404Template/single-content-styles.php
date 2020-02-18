@@ -3,16 +3,11 @@
 <style> .u-section-1 {
   background-image: none;
 }
-  margin: 60px auto 0;
+.u-section-1 .u-sheet-1 {
+  min-height: 100vh;
 }
-.u-section-1 .u-text-2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  line-height: 1;
-  text-transform: uppercase;
-  margin: 20px auto 0;
-}
-.u-section-1 .u-text-3 {
+.u-section-1 .u-text-1 {
+  font-size: 12.5rem;
   background-image: none;
   font-size: 1.5rem;
   width: 525px;
