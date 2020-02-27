@@ -3,6 +3,12 @@
 Template Name: Default Template
 */
 global $post_custom_template;
+$post_custom_template = 'postTemplate';
+$language = isset($_GET['lang']) ? $_GET['lang'] : '';
+
+$isCart = function_exists('wc_get_product') ? is_cart() : false;
+$isCheckout = function_exists('wc_get_product') ? is_checkout() : false;
+if ($isCart) {
     global $cart_custom_template;
     $cart_custom_template = theme_template_get_option('theme_template_' . get_option('stylesheet') . '_' . 'shopping-cart-template');
     $cart_custom_template = $cart_custom_template ? $cart_custom_template : 'shoppingCartTemplate';
