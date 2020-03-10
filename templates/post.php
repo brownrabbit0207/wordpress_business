@@ -1,3 +1,4 @@
+<?php
 /*
 Template Name: Default Template
 */
@@ -7,17 +8,6 @@ $language = isset($_GET['lang']) ? $_GET['lang'] : '';
 
 $isCart = function_exists('wc_get_product') ? is_cart() : false;
 $isCheckout = function_exists('wc_get_product') ? is_checkout() : false;
-if ($isCart) {
-    global $cart_custom_template;
-    $cart_custom_template = theme_template_get_option('theme_template_' . get_option('stylesheet') . '_' . 'shopping-cart-template');
-    $cart_custom_template = $cart_custom_template ? $cart_custom_template : 'shoppingCartTemplate';
-    add_action(
-        'theme_content_styles',
-        function () use ($cart_custom_template) {
-            theme_cart_content_styles($cart_custom_template);
-        }
-    );
-} else if ($isCheckout) {
     global $checkout_custom_template;
     $checkout_custom_template = theme_template_get_option('theme_template_' . get_option('stylesheet') . '_' . 'checkout-template');
     $checkout_custom_template = $checkout_custom_template ? $checkout_custom_template : 'checkoutTemplate';
