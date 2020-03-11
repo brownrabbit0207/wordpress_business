@@ -8,6 +8,17 @@
 --none-contrast-darker: body-color;
 --none-text-color: var(--body-color);
 --transparent: transparent;
+--transparent-darker: transparent;
+--transparent-r: 255;
+--transparent-g: 255;
+--transparent-b: 255;
+--transparent-contrast: body-color;
+--transparent-contrast-darker: body-color;
+--transparent-text-color: var(--body-color);
+--body-color: #111111;
+--body-color-darker: #0f0f0f;
+--body-color-r: 17;
+--body-color-g: 17;
 --body-color-b: 17;
 --body-color-contrast: white;
 --body-color-contrast-darker: white;
