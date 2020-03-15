@@ -1,4 +1,3 @@
-<?php
 /**
  * Npwizard
  */
@@ -23,6 +22,32 @@ class Npwizard {
      */
     public function __construct($options) {
         $this->set_options($options);
+        $this->init();
+    }
+
+    /**
+     * Set options
+     *
+     * @param $options options
+     */
+    public function set_options($options) {
+
+        locate_template(array('library/class-tgm-plugin-activation.php'), true);
+
+        if(isset($options['page_slug'])) {
+            $this->page_slug = esc_attr($options['page_slug']);
+        }
+        if(isset($options['page_title'])) {
+            $this->page_title = esc_attr($options['page_title']);
+        }
+        if(isset($options['steps'])) {
+            $this->options_steps = $options['steps'];
+        }
+        $this->plugin_path = trailingslashit(dirname(__FILE__));
+        $relative_url = str_replace(get_template_directory(), '', $this->plugin_path);
+        $this->plugin_url = trailingslashit(get_template_directory_uri() . $relative_url);
+        $current_theme = wp_get_theme();
+        $this->theme_title = $current_theme->get('Name');
         $this->theme_name = strtolower(preg_replace('#[^a-zA-Z]#', '', $current_theme->get('Name')));
         $this->page_slug = apply_filters($this->theme_name . '_theme_setup_wizard_page_slug', $this->theme_name . '-setup');
         $this->parent_slug = apply_filters($this->theme_name . '_theme_setup_wizard_parent_slug', '');

@@ -1,4 +1,3 @@
-<?php
 /**
  * The template part for displaying content
  *
