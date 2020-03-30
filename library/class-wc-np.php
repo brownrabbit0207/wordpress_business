@@ -1,13 +1,8 @@
+<?php
 /**
  * WC_NP class.
  */
 class WC_NP {
-
-	/**
-	 * Theme init.
-	 */
-	public static function init() {
-		// Remove default wrappers.
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
 		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );
 
