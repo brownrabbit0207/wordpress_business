@@ -9,25 +9,15 @@ function theme_breadcrumbs($args) {
             $li_class = $args['item_class'];
             echo '<li class="' . $li_class . '">';
 
-        }
-        echo $args['separator_icon'];
-        echo '</ul>';
-    }
-}
+            if ($i < $items_count/* - 1*/) {
+                echo trim($items[$i]);
+            } else {
+                echo preg_replace("/<[\/]*a[^>]*>/", "", trim($items[$i]));
+            }
+            echo '</li>';
 
-function theme_breadcrumbs_items($args) {
-    global $post;
-    $items = array();
-
-    if (!is_front_page()) {
-        $items[] = theme_breadcrumbs_link($args, get_home_url(), '', __('Home', 'website4829605'));
-    }
-
-    if (class_exists('WC_Breadcrumb') && function_exists('is_product_category') && is_product_category() && function_exists('is_product') && !is_product() || function_exists('is_shop') && is_shop()) {
-        $breadcrumbs = new WC_Breadcrumb();
-        $args['breadcrumb'] = $breadcrumbs->generate();
-        foreach ($args['breadcrumb'] as $term) {
-            $href = $term[1];
+            if ($i < $items_count - 1) {
+                echo $args['separator'];
             $product_name = $term[0];
             $link = theme_breadcrumbs_link($args, $href, $product_name, $product_name);
             $items[] = $link ? $link : 'Uncategorized';

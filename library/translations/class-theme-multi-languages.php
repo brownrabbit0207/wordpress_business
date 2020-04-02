@@ -8,6 +8,17 @@ class ThemeMultiLanguages {
 	public static function pre_init() {
 		if (!is_admin()) {
 			add_action('wp_head', array(__CLASS__, 'set_language_cookie'));
+			add_action('template_redirect', array(__CLASS__, 'language_redirect'));
+			add_filter('locale', array(__CLASS__, 'set_my_locale'));
+		}
+	}
+	/**
+	 * Get supported languages
+	 *
+	 * @return array $supported_langs
+	 */
+	public static function get_supported_langs() {
+		$supported_langs = json_decode('["en"]', true);  // format: 'en','de'
 		return $supported_langs;
 	}
 
