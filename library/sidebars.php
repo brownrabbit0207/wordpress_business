@@ -1,4 +1,3 @@
-<?php
 /**
  * Registers a widget area.
  *
