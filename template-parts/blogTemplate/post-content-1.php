@@ -3,6 +3,12 @@
 <?php $skip_min_height = false; ?><section class="u-clearfix u-section-1" id="sec-887f">
   <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><?php
 $blogJson = '{"type":"Recent","source":"","tags":"","count":""}';
+$all = count($wp_query->posts); echo getGridAutoRowsStyles($blogJson, $all);
+?>
+
+    <div class="u-blog u-expanded-width u-blog-1">
+      <div class="u-repeater u-repeater-1"><?php
+                                    $countItems = 3;
                                     while (have_posts()) { the_post();
                                     $templateOrder = $wp_query->current_post % $countItems;
                                 ?><?php if ($templateOrder == 0) { ?><!--blog_post-->
