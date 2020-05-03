@@ -1,4 +1,3 @@
-<?php $skip_min_height = false; ?><section class="u-align-center u-clearfix u-section-1" id="sec-51bd">
   <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
     <h1 class="u-text u-text-default u-text-1">404</h1>
     <div class="u-text u-text-default u-text-not-found-message u-text-2"><?php theme_404_content(); ?></div>
