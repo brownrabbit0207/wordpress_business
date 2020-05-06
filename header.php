@@ -3,6 +3,12 @@
  * The template for displaying the header
  *
  * Displays all of the head element and everything up until the "site-content" div.
+ */
+
+?>
+<?php
+$language = isset($_GET['lang']) ? $_GET['lang'] : '';
+$metaGeneratorContent = 'Nicepage 5.9.14, nicepage.com';
 $meta_generator = '';
 if ($metaGeneratorContent) {
     remove_action('wp_head', 'wp_generator');
