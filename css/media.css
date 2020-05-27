@@ -13,22 +13,6 @@
   .u-form-horizontal {
     flex-direction: column;
     align-items: stretch;
-    margin: -0.5rem !important;
-  }
-  .u-form-horizontal .u-form-group {
-    border: 0.5rem solid transparent !important;
-    margin-right: 0 !important;
-  }
-  .u-form-horizontal label {
-    display: none;
-  }
-  .u-form-horizontal .u-btn-submit {
-    flex-grow: 1;
-  }
-}
-@media (min-width: 1400px)  {
-  .u-hidden-xxl {
-    display: none !important;
   }
 }
 @media (min-width: 1200px)  {
