@@ -1,4 +1,3 @@
-<?php
 
 function theme_get_post_short_description($post) {
     $description = wp_strip_all_tags(theme_create_excerpt($post->post_content, 55, 1));
