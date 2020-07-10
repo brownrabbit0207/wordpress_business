@@ -18,16 +18,11 @@ class Npwizard {
 
     /**
      * Constructor
-            $this->page_title = esc_attr($options['page_title']);
-        }
-        if(isset($options['steps'])) {
-            $this->options_steps = $options['steps'];
-        }
-        $this->plugin_path = trailingslashit(dirname(__FILE__));
-        $relative_url = str_replace(get_template_directory(), '', $this->plugin_path);
-        $this->plugin_url = trailingslashit(get_template_directory_uri() . $relative_url);
-        $current_theme = wp_get_theme();
-        $this->theme_title = $current_theme->get('Name');
+     *
+     * @param $options options
+     */
+    public function __construct($options) {
+        $this->set_options($options);
         $this->theme_name = strtolower(preg_replace('#[^a-zA-Z]#', '', $current_theme->get('Name')));
         $this->page_slug = apply_filters($this->theme_name . '_theme_setup_wizard_page_slug', $this->theme_name . '-setup');
         $this->parent_slug = apply_filters($this->theme_name . '_theme_setup_wizard_parent_slug', '');
