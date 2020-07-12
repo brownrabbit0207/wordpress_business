@@ -1,4 +1,3 @@
-<?php
 /*
 Template Name: Default Template
 */
@@ -23,6 +22,32 @@ if ($isCart) {
     $checkout_custom_template = theme_template_get_option('theme_template_' . get_option('stylesheet') . '_' . 'checkout-template');
     $checkout_custom_template = $checkout_custom_template ? $checkout_custom_template : 'checkoutTemplate';
     add_action(
+        'theme_content_styles',
+        function () use ($checkout_custom_template) {
+            theme_checkout_content_styles($checkout_custom_template);
+        }
+    );
+} else {
+    add_action(
+        'theme_content_styles',
+        function () use ($post_custom_template) {
+            theme_single_content_styles($post_custom_template);
+        }
+    );
+}
+
+function theme_single_body_class_filter($classes) {
+    $classes[] = 'u-body u-xl-mode';
+    return $classes;
+}
+add_filter('body_class', 'theme_single_body_class_filter');
+
+function theme_single_body_style_attribute() {
+    return "";
+}
+add_filter('add_body_style_attribute', 'theme_single_body_style_attribute');
+
+function theme_single_body_back_to_top() {
     ob_start(); ?>
     
     <?php
