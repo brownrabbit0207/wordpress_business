@@ -1,3 +1,4 @@
+<?php
 
 function theme_breadcrumbs($args) {
     $items = theme_breadcrumbs_items($args);
@@ -7,17 +8,6 @@ function theme_breadcrumbs($args) {
         for ($i = 0; $i < $items_count; $i++ ) {
             $li_class = $args['item_class'];
             echo '<li class="' . $li_class . '">';
-
-            if ($i < $items_count/* - 1*/) {
-                echo trim($items[$i]);
-            } else {
-                echo preg_replace("/<[\/]*a[^>]*>/", "", trim($items[$i]));
-            }
-            echo '</li>';
-
-            if ($i < $items_count - 1) {
-                echo $args['separator'];
-            }
 
         }
         echo $args['separator_icon'];

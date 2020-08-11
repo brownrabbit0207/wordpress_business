@@ -1,3 +1,4 @@
+<?php
 
 class Walker_Categories_Widget extends Walker_Category {
 
@@ -7,17 +8,6 @@ class Walker_Categories_Widget extends Walker_Category {
 
     public function end_lvl(&$output, $depth=0, $args=array()) {
         $output .= "</ul>\n";
-    }
-
-    public function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
-        $cat_name = apply_filters(
-            'list_cats',
-            esc_attr( $category->name ),
-            $category
-        );
-        if ( ! $cat_name ) {
-            return;
-        }
         $linkClass = '{catLinkClass}';
         $linkStyle = '{catLinkStyle}';
         $link = '<div class="{catItemClass}" style="{catItemStyle}"><a class="' . $linkClass . '" style="' . $linkStyle . '" href="' . esc_url( get_term_link( $category ) ) . '" ';

@@ -1,3 +1,4 @@
+<?php
 /**
  * The template for displaying the header
  *
@@ -7,17 +8,6 @@
 ?>
 <?php
 $language = isset($_GET['lang']) ? $_GET['lang'] : '';
-$metaGeneratorContent = 'Nicepage 5.9.14, nicepage.com';
-$meta_generator = '';
-if ($metaGeneratorContent) {
-    remove_action('wp_head', 'wp_generator');
-    $meta_generator = '<meta name="generator" content="' . $metaGeneratorContent . '" />' . "\n";
-    $GLOBALS['meta_generator'] = $metaGeneratorContent;
-}
-$metaReferrer = '';
-$meta_referrer = '';
-if ($metaReferrer) {
-    $meta_referrer = '<meta name="referrer" content="origin" />' . "\n";
     $GLOBALS['meta_referrer'] = $metaReferrer;
 }
 $hideHeader = false; // default header is visible

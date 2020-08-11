@@ -1,3 +1,4 @@
+<?php
 
 function theme_get_post_short_description($post) {
     $description = wp_strip_all_tags(theme_create_excerpt($post->post_content, 55, 1));
@@ -7,17 +8,6 @@ function theme_get_post_short_description($post) {
     return str_replace(array("\r", "\n"), ' ', $description);
 }
 
-function theme_og_meta_tags() {
-    if (!theme_get_option('seo_og')) {
-        return;
-    }
-
-    global $post;
-
-    if (is_front_page() || is_home()) {
-        $type = 'website';
-    } else if (is_singular()) {
-        $type = $post->post_type === 'product' ? 'product' : 'article';
     } else {
         $type = 'object';
     }
