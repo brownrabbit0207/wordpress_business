@@ -8,6 +8,17 @@
 }
 .u-section-1 .u-text-1 {
   font-size: 12.5rem;
+  font-weight: 700;
+  margin: 60px auto 0;
+}
+.u-section-1 .u-text-2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 20px auto 0;
+}
+.u-section-1 .u-text-3 {
   background-image: none;
   font-size: 1.5rem;
   width: 525px;
