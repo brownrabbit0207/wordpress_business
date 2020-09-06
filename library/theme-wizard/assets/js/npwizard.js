@@ -1,4 +1,3 @@
-var Npwizard = (function($){
 
     var t;
     var current_step = '';
