@@ -1,13 +1,8 @@
+var Npwizard = (function($){
 
     var t;
     var current_step = '';
     var step_pointer = '';
-    var callbacks = {
-        do_next_step: function(btn) {
-            do_next_step(btn);
-        },
-        install_plugins: function(btn){
-            var plugins = new PluginManager();
             plugins.init(btn);
         },
         import_content: function(btn){
