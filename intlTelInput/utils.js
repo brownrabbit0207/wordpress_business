@@ -3,16 +3,11 @@
  Copyright The Closure Library Authors.
  SPDX-License-Identifier: Apache-2.0
 */
- All other code copyright its respective owners.
- Copyright (C) 2010 The Libphonenumber Authors
+    var aa=this||self;function k(a,b){a=a.split(".");var c=aa;a[0]in c||"undefined"==typeof c.execScript||c.execScript("var "+a[0]);for(var d;a.length&&(d=a.shift());)a.length||void 0===b?c[d]&&c[d]!==Object.prototype[d]?c=c[d]:c=c[d]={}:c[d]=b}function m(a,b){function c(){}c.prototype=b.prototype;a.$=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.fa=function(d,e,g){for(var f=Array(arguments.length-2),h=2;h<arguments.length;h++)f[h-2]=arguments[h];return b.prototype[e].apply(d,f)}};function ba(a){var b=[],c=0,d;for(d in a)b[c++]=a[d];return b};function ca(a,b){a.sort(b||da)}function da(a,b){return a>b?1:a<b?-1:0};function ea(a,b){this.g=a;this.m=!!b.o;this.i=b.h;this.v=b.type;this.u=!1;switch(this.i){case fa:case ha:case ia:case ja:case ka:case la:case ma:this.u=!0}this.l=b.defaultValue}var ma=1,la=2,fa=3,ha=4,ia=6,ja=16,ka=18;function na(a,b){this.i=a;this.g={};for(a=0;a<b.length;a++){var c=b[a];this.g[c.g]=c}}function oa(a){a=ba(a.g);ca(a,function(b,c){return b.g-c.g});return a};function n(){this.g={};this.l=this.j().g;this.i=this.m=null}n.prototype.has=function(a){return null!=this.g[a.g]};n.prototype.get=function(a,b){return p(this,a.g,b)};n.prototype.set=function(a,b){q(this,a.g,b)};n.prototype.add=function(a,b){r(this,a.g,b)};
+    function t(a,b){for(var c=oa(a.j()),d=0;d<c.length;d++){var e=c[d],g=e.g;if(null!=b.g[g]){a.i&&delete a.i[e.g];var f=11==e.i||10==e.i;if(e.m){e=u(b,g);for(var h=0;h<e.length;h++)r(a,g,f?e[h].clone():e[h])}else e=v(b,g),f?(f=v(a,g))?t(f,e):q(a,g,e.clone()):q(a,g,e)}}}n.prototype.clone=function(){var a=new this.constructor;a!=this&&(a.g={},a.i&&(a.i={}),t(a,this));return a};
+    function v(a,b){var c=a.g[b];if(null==c)return null;if(a.m){if(!(b in a.i)){var d=a.m,e=a.l[b];if(null!=c)if(e.m){for(var g=[],f=0;f<c.length;f++)g[f]=d.i(e,c[f]);c=g}else c=d.i(e,c);return a.i[b]=c}return a.i[b]}return c}function p(a,b,c){var d=v(a,b);return a.l[b].m?d[c||0]:d}function w(a,b){if(null!=a.g[b])a=p(a,b,void 0);else a:{a=a.l[b];if(void 0===a.l)if(b=a.v,b===Boolean)a.l=!1;else if(b===Number)a.l=0;else if(b===String)a.l=a.u?"0":"";else{a=new b;break a}a=a.l}return a}
+    function u(a,b){return v(a,b)||[]}function x(a,b){return a.l[b].m?null!=a.g[b]?a.g[b].length:0:null!=a.g[b]?1:0}function q(a,b,c){a.g[b]=c;a.i&&(a.i[b]=c)}function r(a,b,c){a.g[b]||(a.g[b]=[]);a.g[b].push(c);a.i&&delete a.i[b]}function y(a,b){var c=[],d;for(d in b)0!=d&&c.push(new ea(d,b[d]));return new na(a,c)};function A(){}A.prototype.g=function(a){new a.i;throw Error("Unimplemented");};A.prototype.i=function(a,b){if(11==a.i||10==a.i)return b instanceof n?b:this.g(a.v.prototype.j(),b);if(14==a.i)return"string"===typeof b&&B.test(b)&&(a=Number(b),0<a)?a:b;if(!a.u)return b;a=a.v;if(a===String){if("number"===typeof b)return String(b)}else if(a===Number&&"string"===typeof b&&("Infinity"===b||"-Infinity"===b||"NaN"===b||B.test(b)))return Number(b);return b};var B=/^-?[0-9]+$/;function C(){}m(C,A);C.prototype.g=function(a,b){a=new a.i;a.m=this;a.g=b;a.i={};return a};function D(){}m(D,C);D.prototype.i=function(a,b){return 8==a.i?!!b:A.prototype.i.apply(this,arguments)};D.prototype.g=function(a,b){return D.$.g.call(this,a,b)};function E(a,b){null!=a&&this.g.apply(this,arguments)}E.prototype.i="";E.prototype.set=function(a){this.i=""+a};E.prototype.g=function(a,b,c){this.i+=String(a);if(null!=b)for(var d=1;d<arguments.length;d++)this.i+=arguments[d];return this};E.prototype.toString=function(){return this.i};/*
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  See the License for the specific language governing permissions and
