@@ -13,22 +13,6 @@ var Npwizard = (function($){
         },
         import_content: function(btn){
             var content = new ContentManager(btn.text);
-            content.init(btn);
-        },
-        replace_content: function(btn){
-            var content = new ContentManager(btn.text);
-            content.init(btn);
-        }
-    };
-
-    function window_loaded() {
-        var maxHeight = 0;
-        $('.npwizard-menu li.step').each(function(index) {
-            $(this).attr('data-height', $(this).innerHeight());
-            if($(this).innerHeight() > maxHeight) {
-                maxHeight = $(this).innerHeight();
-            }
-        });
         $('.npwizard-menu li .detail').each(function(index) {
             $(this).attr('data-height', $(this).innerHeight());
             $(this).addClass('scale-down');

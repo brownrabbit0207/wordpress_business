@@ -13,22 +13,6 @@ function theme_nosidebar_widget($props) {
         } else if (is_array($source_key)) {
             $args[$args_key] = _arr($props, $source_key[0], $source_key[1]);
         }
-    }
-    the_widget($class, $args);
-}
-
-global $theme_nosidebar_widgets;
-$theme_nosidebar_widgets = array(
-    'text' => array(
-        'WP_Widget_Text',
-        array(
-            'title' => 'title',
-            'text' => 'content',
-        ),
-        array(
-            'filter' => true,
-        )
-    ),
     'calendar' => array(
         'WP_Widget_Calendar',
         array(
