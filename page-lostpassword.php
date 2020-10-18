@@ -1,4 +1,3 @@
-<?php
 global $pageLostPassword;
 $pageLostPassword = true;
 $filePath = get_template_directory() . '/page-login.php';
