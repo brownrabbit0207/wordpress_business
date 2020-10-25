@@ -1,4 +1,3 @@
-<?php
 
 function theme_breadcrumbs($args) {
     $items = theme_breadcrumbs_items($args);
