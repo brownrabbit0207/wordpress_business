@@ -3,26 +3,16 @@ var Npwizard = (function($){
     var t;
     var current_step = '';
     var step_pointer = '';
+    var callbacks = {
+        do_next_step: function(btn) {
+            do_next_step(btn);
+        },
+        install_plugins: function(btn){
+            var plugins = new PluginManager();
             plugins.init(btn);
         },
         import_content: function(btn){
             var content = new ContentManager(btn.text);
-            content.init(btn);
-        },
-        replace_content: function(btn){
-            var content = new ContentManager(btn.text);
-            content.init(btn);
-        }
-    };
-
-    function window_loaded() {
-        var maxHeight = 0;
-        $('.npwizard-menu li.step').each(function(index) {
-            $(this).attr('data-height', $(this).innerHeight());
-            if($(this).innerHeight() > maxHeight) {
-                maxHeight = $(this).innerHeight();
-            }
-        });
         $('.npwizard-menu li .detail').each(function(index) {
             $(this).attr('data-height', $(this).innerHeight());
             $(this).addClass('scale-down');
