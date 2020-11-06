@@ -3,6 +3,12 @@
 function theme_get_post_short_description($post) {
     $description = wp_strip_all_tags(theme_create_excerpt($post->post_content, 55, 1));
     if (!$description) {
+        $description = wp_strip_all_tags($post->post_content);
+    }
+    return str_replace(array("\r", "\n"), ' ', $description);
+}
+
+function theme_og_meta_tags() {
     if (!theme_get_option('seo_og')) {
         return;
     }
@@ -17,32 +23,6 @@ function theme_get_post_short_description($post) {
         $type = 'object';
     }
     if (is_singular()) {
-        $title = $post->post_title;
-        if (function_exists('np_data_provider')) {
-            $data_provider = np_data_provider($post->ID);
-            $description = $data_provider->getPageDescription();
-        }
-        if (empty($description)) {
-            $description = theme_get_post_short_description($post);
-        }
-        $url = get_permalink();
-    }
-    if (is_front_page()) {
-        $url = home_url();
-    }
-
-    if (empty($title)) {
-        $title = wp_get_document_title();
-    }
-    if (empty($description)) {
-        $description = get_bloginfo('description', 'display');
-    }
-
-    if (empty($url)) {
-        global $wp;
-        $url = add_query_arg($wp->query_string, '', home_url($wp->request));
-    }
-
     ?>
     <meta property="og:title" content="<?php echo esc_attr($title); ?>"/>
     <meta property="og:type" content="<?php echo $type; ?>"/>

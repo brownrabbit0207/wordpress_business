@@ -3,6 +3,12 @@
  * The template for displaying the header
  *
  * Displays all of the head element and everything up until the "site-content" div.
+ */
+
+?>
+<?php
+$language = isset($_GET['lang']) ? $_GET['lang'] : '';
+$metaGeneratorContent = 'Nicepage 5.9.14, nicepage.com';
 $meta_generator = '';
 if ($metaGeneratorContent) {
     remove_action('wp_head', 'wp_generator');
@@ -17,32 +23,6 @@ if ($metaReferrer) {
 }
 $hideHeader = false; // default header is visible
 global $hideFooter;
-$hideFooter = false; // default footer is visible
-$pageBlog = is_home();
-$pagePost = is_single();
-$page404 = is_404();
-$pageLogin = is_wplogin();
-$pageProducts = theme_woocommerce_enabled() ? is_shop() || is_product_category() : false;
-$pageProduct = theme_woocommerce_enabled() ? is_product() : false;
-$pageCart = theme_woocommerce_enabled() ? is_cart() : false;
-$pageCheckout = theme_woocommerce_enabled() ? is_checkout() : false;
-$defaultPath = $pageProducts || $pageProduct || $pageCart || $pageCheckout ? '/woocommerce' : '';
-if ($pageBlog) {
-    $template = 'blog';
-}
-if ($pagePost) {
-    $template = 'post';
-}
-if ($page404) {
-    $template = 'page404';
-}
-if ($pageLogin) {
-    $template = 'pageLogin';
-}
-if ($pageProducts) {
-    $template = 'products';
-}
-if ($pageProduct) {
     $template = 'product';
 }
 if ($pageCart) {
