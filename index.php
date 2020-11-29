@@ -1,1 +1,0 @@
-<?php theme_load_template('Post Template', 'postTemplate'); ?>
