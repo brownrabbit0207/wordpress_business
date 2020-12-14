@@ -1,3 +1,4 @@
+<?php
 global $blog_custom_template;
 $blog_custom_template = 'blogTemplate';
 $language = isset($_GET['lang']) ? $_GET['lang'] : '';
