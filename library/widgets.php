@@ -1,4 +1,3 @@
-<?php
 
 function theme_nosidebar_widget($props) {
     global $theme_nosidebar_widgets;
