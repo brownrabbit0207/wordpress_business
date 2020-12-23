@@ -8,6 +8,17 @@
   margin-bottom: 60px;
   height: auto;
 }
+.u-section-1 .u-repeater-1 {
+  grid-template-columns: repeat(3, calc(33.3333% - 14.6667px));
+  min-height: 441px;
+  grid-gap: 22px;
+}
+.u-section-1 .u-repeater-item-1 {
+  background-image: none;
+}
+.u-section-1 .u-container-layout-1 {
+  padding: 30px 20px;
+}
 .u-section-1 .u-text-1 {
   margin-top: 0;
   margin-bottom: 0;
