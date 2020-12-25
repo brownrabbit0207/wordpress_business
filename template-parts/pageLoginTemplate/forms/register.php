@@ -18,3 +18,7 @@
 $pathToLinkTemplates = get_template_directory() . '/template-parts/' . $pageLogin_custom_template . '/links/';
 if (file_exists($pathToLinkTemplates . 'login.php')) {
 	include_once $pathToLinkTemplates . 'login.php';
+}
+if (file_exists($pathToLinkTemplates . 'register.php')) {
+	include_once $pathToLinkTemplates . 'lostpassword.php';
+}
