@@ -3,12 +3,6 @@
 Template Name: The template for displaying 404 pages (not found)
 */
 global $page404_custom_template;
-$page404_custom_template = 'page404Template';
-$language = isset($_GET['lang']) ? $_GET['lang'] : '';
-
-add_action(
-    'theme_content_styles',
-    function () use ($page404_custom_template) {
         theme_single_content_styles($page404_custom_template);
     }
 );

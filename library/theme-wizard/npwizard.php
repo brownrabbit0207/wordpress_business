@@ -3,12 +3,6 @@
  * Npwizard
  */
 
-class Npwizard {
-
-    protected $version = '2.8.0';
-    protected $theme_name = '';
-    protected $theme_title = '';
-    protected $page_slug = '';
     protected $page_title = '';
     protected $options_steps = array();
     protected $plugin_url = '';

@@ -3,16 +3,26 @@ Theme Name: website4829605
 Theme URI: https://nicepage.com/wordpress
 Author: Nicepage
 Author URI: https://nicepage.com
-Description: undefined v.5.9.14
-Tags: left-sidebar, right-sidebar, custom-background, custom-colors, blog
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.0
-Text Domain: website4829605
 */
 
 
 /**
+ * Table of Contents
+ *
+ * 1.0 - Normalize
+ * 2.0 - Genericons
+ * 3.0 - Typography
+ * 4.0 - Elements
+ * 5.0 - Forms
+ * 6.0 - Navigation
+ *   6.1 - Links
+ *   6.2 - Menus
+ * 7.0 - Accessibility
+ * 8.0 - Alignments
+ * 9.0 - Clearings
+ * 10.0 - Widgets
+ * 11.0 - Content
+ *    11.1 - Header
  *    11.2 - Posts and pages
  *    11.3 - Post Formats
  *    11.4 - Comments
