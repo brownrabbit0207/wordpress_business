@@ -3,6 +3,12 @@
   .u-form-vertical .u-form-group {
     width: 100%;
   }
+}
+@media (max-width: 575px)  {
+  .u-form-vertical .u-form-group.u-label-left {
+    display: block;
+  }
+}
 @media (max-width: 767px)  {
   .u-form-horizontal {
     flex-direction: column;
