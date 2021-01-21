@@ -18,27 +18,6 @@ class Npwizard {
 
     /**
      * Constructor
-     *
-     * @param $options options
-     */
-    public function __construct($options) {
-        $this->set_options($options);
-        $this->init();
-    }
-
-    /**
-     * Set options
-     *
-     * @param $options options
-     */
-    public function set_options($options) {
-
-        locate_template(array('library/class-tgm-plugin-activation.php'), true);
-
-        if(isset($options['page_slug'])) {
-            $this->page_slug = esc_attr($options['page_slug']);
-        }
-        if(isset($options['page_title'])) {
             $this->page_title = esc_attr($options['page_title']);
         }
         if(isset($options['steps'])) {
