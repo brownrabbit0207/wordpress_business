@@ -1,3 +1,4 @@
+<?php
 /**
  * WC_NP class.
  */
