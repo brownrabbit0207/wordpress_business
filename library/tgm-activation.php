@@ -1,4 +1,3 @@
-<?php
 defined('ABSPATH') or die;
 
 require_once get_template_directory() . '/library/class-tgm-plugin-activation.php';
