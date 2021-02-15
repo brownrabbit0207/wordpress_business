@@ -1,3 +1,4 @@
+<!-- header styles -->
 
 <?php
    $localFonts = apply_filters('get_local_fonts', '');
