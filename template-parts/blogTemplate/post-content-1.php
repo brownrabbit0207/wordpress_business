@@ -1,4 +1,3 @@
-<?php global $wp_query, $post;
  ?>
 <?php $skip_min_height = false; ?><section class="u-clearfix u-section-1" id="sec-887f">
   <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><?php
