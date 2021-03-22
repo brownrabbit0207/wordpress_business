@@ -1,3 +1,4 @@
+<!-- footer styles -->
 
 <style> .u-footer {
   background-image: none;
