@@ -1,3 +1,4 @@
+<style id="color-scheme" color-scheme="summer-time" color-style="multicolor-1">.u-body {
 --none: transparent;
 --none-darker: transparent;
 --none-r: 255;
