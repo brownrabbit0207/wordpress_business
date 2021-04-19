@@ -3,12 +3,6 @@
  */
 
 (function ($) {
-    var api = wp.customize;
-
-    // Site title.
-    api('blogname', function (value) {
-        value.bind(function (to) {
-            $('.site-title a').text(to);
         });
     });
 
