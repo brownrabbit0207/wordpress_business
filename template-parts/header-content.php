@@ -13,6 +13,22 @@
         <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
           <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
           <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+        </a>
+      </div>
+      <div class="u-nav-container">
+        {menu}
+      </div>
+      <div class="u-nav-container-collapse">
+        <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+          <div class="u-inner-container-layout u-sidenav-overflow">
+            <div class="u-menu-close"></div>
+            {responsive_menu}
+          </div>
+        </div>
+        <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+      </div>
+    </nav><?php
             $menu_template = ob_get_clean();
             $menuPath = '/template-parts/menu/primary-navigation-1/';
             $processorPath = get_theme_file_path('/template-parts/menu/popups-render.php');
