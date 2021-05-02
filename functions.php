@@ -1,4 +1,3 @@
-<?php
 /**
  * Theme only works in WordPress 4.4 or later.
  */
