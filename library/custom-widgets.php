@@ -13,16 +13,11 @@ class WP_Categories_Widget extends WP_Widget {
     public function widget( $args, $instance ) {
         render_custom_widget($args, $instance , 'WP_Widget_Categories');
     }
-        parent::__construct(
-            'WP_ProductCategories_Widget',
-            __('Product Categories', 'default'),
-            array( 'description' => __( 'A list of product categories.', 'default' ), )
-        );
+
+    public function form( $instance ) {
+        render_widget_form($instance, $this->get_field_id( 'title' ), $this->get_field_name( 'title' ), 'Categories');
     }
 
-    public function widget( $args, $instance ) {
-        render_custom_widget($args, $instance , 'WC_Widget_Product_Categories');
-    }
 
     public function form( $instance ) {
         render_widget_form($instance, $this->get_field_id( 'title' ), $this->get_field_name( 'title' ), 'Product Categories');
