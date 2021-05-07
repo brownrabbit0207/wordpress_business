@@ -23,9 +23,3 @@
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'website4829605' ); ?></p>
-			<?php get_search_form(); ?>
-
-		<?php endif; ?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
