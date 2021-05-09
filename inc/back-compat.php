@@ -1,4 +1,3 @@
-<?php
 /**
  * Theme back compat functionality
  *
