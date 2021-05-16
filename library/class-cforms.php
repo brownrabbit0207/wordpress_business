@@ -1,8 +1,13 @@
-<?php
 defined('ABSPATH') or die;
 
 class CFormFields {
     public $fields = array();
+
+    /**
+     * Parse fields from publishHtml
+     *
+     * @param string $form_html
+     */
     public function parseFromHtml($form_html) {
         preg_match_all('#<(input|textarea|select)([^>]*)>#', $form_html, $matches);
 

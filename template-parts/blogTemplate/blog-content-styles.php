@@ -1,8 +1,13 @@
-<!-- index styles -->
 
 <style>.u-section-1 .u-sheet-1 {
   min-height: 561px;
 }
+.u-section-1 .u-blog-1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  height: auto;
+}
+.u-section-1 .u-repeater-1 {
   grid-template-columns: repeat(3, calc(33.3333% - 14.6667px));
   min-height: 441px;
   grid-gap: 22px;

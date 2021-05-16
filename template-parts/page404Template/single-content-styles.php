@@ -1,8 +1,13 @@
-<!-- post styles -->
 
 <style> .u-section-1 {
   background-image: none;
 }
+.u-section-1 .u-sheet-1 {
+  min-height: 100vh;
+}
+.u-section-1 .u-text-1 {
+  font-size: 12.5rem;
+  font-weight: 700;
   margin: 60px auto 0;
 }
 .u-section-1 .u-text-2 {
