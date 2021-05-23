@@ -1,4 +1,3 @@
-<header class="u-clearfix u-header u-header" id="sec-f193">
   <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
     <?php $logo = theme_get_logo(array(
             'default_src' => "/images/default-logo.png",
