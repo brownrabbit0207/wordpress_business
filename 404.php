@@ -1,1 +1,0 @@
-<?php theme_load_template('404 Template', 'page404Template'); ?>
