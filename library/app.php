@@ -3,12 +3,6 @@
 /**
  * Theme settings
  *
- * @param array $settings
- * @return array
- */
-function theme_app_settings($settings) {
-    return json_decode(<<<JSON
-    {
     "colorScheme": {
         "name": "summer-time",
         "isDefault": true,
