@@ -3,6 +3,12 @@
  * Customizer functionality
  */
 
+
+/**
+ * Customizer registration
+ *
+ * @param WP_Customize_Manager $wp_customize The Customizer object.
+ */
 function theme_customize_register($wp_customize) {
     global $theme_default_options;
     $wp_customize->get_setting('blogname')->transport = 'postMessage';
