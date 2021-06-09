@@ -8,6 +8,17 @@ add_action(
     function () use ($blog_custom_template) {
         theme_blog_content_styles($blog_custom_template);
     }
+);
+
+function theme_index_body_class_filter($classes) {
+    $classes[] = 'u-body u-xl-mode';
+    return $classes;
+}
+add_filter('body_class', 'theme_index_body_class_filter');
+
+function theme_index_body_style_attribute() {
+    return "";
+}
 add_filter('add_body_style_attribute', 'theme_index_body_style_attribute');
 
 function theme_index_body_back_to_top() {
