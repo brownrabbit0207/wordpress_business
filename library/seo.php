@@ -13,26 +13,16 @@ function theme_og_meta_tags() {
         return;
     }
 
-            $description = theme_get_post_short_description($post);
-        }
-        $url = get_permalink();
-    }
-    if (is_front_page()) {
-        $url = home_url();
-    }
+    global $post;
 
-    if (empty($title)) {
-        $title = wp_get_document_title();
+    if (is_front_page() || is_home()) {
+        $type = 'website';
+    } else if (is_singular()) {
+        $type = $post->post_type === 'product' ? 'product' : 'article';
+    } else {
+        $type = 'object';
     }
-    if (empty($description)) {
-        $description = get_bloginfo('description', 'display');
-    }
-
-    if (empty($url)) {
-        global $wp;
-        $url = add_query_arg($wp->query_string, '', home_url($wp->request));
-    }
-
+    if (is_singular()) {
     ?>
     <meta property="og:title" content="<?php echo esc_attr($title); ?>"/>
     <meta property="og:type" content="<?php echo $type; ?>"/>
