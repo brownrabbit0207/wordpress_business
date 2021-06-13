@@ -1,4 +1,3 @@
-
           </div>
           <?php $sidebar_html = theme_sidebar(array(
             'id' => 'primary',
