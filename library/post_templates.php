@@ -1,3 +1,4 @@
+<?php
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 add_action('admin_init', 'theme_admin_init', 1000);
