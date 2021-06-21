@@ -18,6 +18,27 @@ h6 {
   color: var(--white-contrast);
 }
 .u-shading,
+.u-overlap.u-overlap-contrast .u-header {
+  color: var(--shading-contrast);
+}
+.u-body {
+  color: var(--bg-contrast);
+  background-color: var(--bg-color);
+  --effect-scale: 1.1;
+}
+
+
+.u-custom-font.u-text-font {
+  font-family: var(--text-font) !important;
+}
+.u-custom-font.u-heading-font {
+  font-family: var(--heading-font) !important;
+}
+
+
+.u-none.u-input,
+.u-none.u-field-input,
+.u-none.u-button-style,
 .u-none.u-button-style:hover,
 .u-none.u-button-style:focus,
 .u-none.u-button-style:active,
