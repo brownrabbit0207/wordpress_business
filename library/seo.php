@@ -8,16 +8,11 @@ function theme_get_post_short_description($post) {
     return str_replace(array("\r", "\n"), ' ', $description);
 }
 
-    } else {
-        $type = 'object';
+function theme_og_meta_tags() {
+    if (!theme_get_option('seo_og')) {
+        return;
     }
-    if (is_singular()) {
-        $title = $post->post_title;
-        if (function_exists('np_data_provider')) {
-            $data_provider = np_data_provider($post->ID);
-            $description = $data_provider->getPageDescription();
-        }
-        if (empty($description)) {
+
             $description = theme_get_post_short_description($post);
         }
         $url = get_permalink();
