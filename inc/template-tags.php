@@ -1,3 +1,4 @@
+<?php
 /**
  * Custom Twenty Sixteen template tags
  *
