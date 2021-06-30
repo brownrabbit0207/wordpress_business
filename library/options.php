@@ -3,6 +3,12 @@ defined('ABSPATH') or die;
 
 global $theme_options, $theme_templates_options, $theme_template_query, $theme_template_type_priority, $theme_default_options;
 
+$theme_templates_options = array();
+$theme_selectable_templates = array();
+$theme_template_type_priority = array();
+$theme_template_query = array();
+
+if(!function_exists('theme_woocommerce_enabled')) {
     function theme_woocommerce_enabled() {
         global $woocommerce;
         return $woocommerce != null;
