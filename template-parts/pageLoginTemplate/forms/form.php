@@ -1,4 +1,3 @@
-<?php global $post; $content = isset($post->post_content) ? do_shortcode($post->post_content) : '';
 global $pageLostPassword, $pageLogin, $pageRegister;
 if ($pageLostPassword) {
 	$template = $pathToFormsTemplates . 'lostpassword.php';
