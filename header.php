@@ -3,16 +3,11 @@
  * The template for displaying the header
  *
  * Displays all of the head element and everything up until the "site-content" div.
-$meta_generator = '';
-if ($metaGeneratorContent) {
-    remove_action('wp_head', 'wp_generator');
-    $meta_generator = '<meta name="generator" content="' . $metaGeneratorContent . '" />' . "\n";
-    $GLOBALS['meta_generator'] = $metaGeneratorContent;
-}
-$metaReferrer = '';
-$meta_referrer = '';
-if ($metaReferrer) {
-    $meta_referrer = '<meta name="referrer" content="origin" />' . "\n";
+ */
+
+?>
+<?php
+$language = isset($_GET['lang']) ? $_GET['lang'] : '';
     $GLOBALS['meta_referrer'] = $metaReferrer;
 }
 $hideHeader = false; // default header is visible
