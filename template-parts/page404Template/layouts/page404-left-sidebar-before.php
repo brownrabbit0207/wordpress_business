@@ -1,3 +1,4 @@
+<div class="u-page-root"><div class="u-content-layout u-sheet">
           <?php $sidebar_html = theme_sidebar(array(
             'id' => 'primary',
             'template' => <<<WIDGET_TEMPLATE
