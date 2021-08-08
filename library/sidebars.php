@@ -1,4 +1,3 @@
-<?php
 /**
  * Registers a widget area.
  *
@@ -18,3 +17,19 @@ function theme_register_unregister_widget_filters($sidebar_id, $add = true) {
     if (isset($widget_filters[$sidebar_id])) {
         if ($add) {
             add_filter('widget_text', $widget_filters[$sidebar_id], 1000);
+        } else {
+            remove_filter('widget_text', $widget_filters[$sidebar_id], 1000);
+        }
+    }
+}
+
+function theme_register_widget_filters($sidebar_id) {
+    theme_register_unregister_widget_filters($sidebar_id, true);
+}
+
+function theme_unregister_widget_filters($sidebar_id) {
+    theme_register_unregister_widget_filters($sidebar_id, false);
+}
+
+add_action('dynamic_sidebar_before', 'theme_register_widget_filters');
+add_action('dynamic_sidebar_after', 'theme_unregister_widget_filters');

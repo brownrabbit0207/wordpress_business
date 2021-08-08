@@ -1,4 +1,3 @@
-<?php
 /*
 Template Name: The template for displaying login page
 */
@@ -18,6 +17,27 @@ function theme_login_body_class_filter($classes) {
     return $classes;
 }
 add_filter('body_class', 'theme_login_body_class_filter');
+
+function theme_login_body_style_attribute() {
+    return "";
+}
+add_filter('add_body_style_attribute', 'theme_login_body_style_attribute');
+
+function theme_login_body_back_to_top() {
+    ob_start(); ?>
+    
+    <?php
+    return ob_get_clean();
+}
+add_filter('add_back_to_top', 'theme_login_body_back_to_top');
+
+
+function theme_login_get_local_fonts() {
+    return '';
+}
+add_filter('get_local_fonts', 'theme_login_get_local_fonts');
+
+ob_start();
 get_header();
 $header = ob_get_clean();
 if (function_exists('renderHeader')) {
