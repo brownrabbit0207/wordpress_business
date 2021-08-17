@@ -1,3 +1,4 @@
+<form action="<?php echo wp_login_url(); ?>" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
         <div class="u-form-group u-form-name">
           <label for="username-a30d" class="u-label" name=""><?php _e( 'Username' ); ?></label>
           <input type="text" placeholder="<?php _e( 'Username' ); ?>" id="username-a30d" name="log" class="u-input u-input-rectangle u-none u-input-1" required="">

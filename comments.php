@@ -1,3 +1,4 @@
+<?php
 /**
  * The template for displaying comments
  *
@@ -7,17 +8,6 @@
  * @package WordPress
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
- */
-
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
-if ( post_password_required() ) {
-	return;
-}
-?>
 
 <section class="u-align-center u-clearfix u-section-1" id="sec-a69d">
   <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1" style="min-height: auto;">
