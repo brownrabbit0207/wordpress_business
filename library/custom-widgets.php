@@ -1,4 +1,3 @@
-<?php
 // Add categories widget for WP >= 5.8
 class WP_Categories_Widget extends WP_Widget {
 
