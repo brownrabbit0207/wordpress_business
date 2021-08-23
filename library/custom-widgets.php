@@ -1,13 +1,8 @@
+<?php
 // Add categories widget for WP >= 5.8
 class WP_Categories_Widget extends WP_Widget {
 
     function __construct() {
-        parent::__construct(
-            'WP_Categories_Widget',
-            __('Categories', 'default'),
-            array( 'description' => __( 'A list of categories.', 'default' ), )
-        );
-    }
 
     public function widget( $args, $instance ) {
         render_custom_widget($args, $instance , 'WP_Widget_Categories');
