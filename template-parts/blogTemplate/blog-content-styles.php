@@ -23,32 +23,6 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-.u-section-1 .u-image-1 {
-  height: 222px;
-  margin-top: 17px;
-  margin-bottom: 0;
-  visibility: hidden;
-}
-.u-section-1 .u-text-2 {
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-.u-section-1 .u-btn-1 {
-  background-image: none;
-  border-style: solid;
-  margin: 17px auto 0 0;
-  padding: 0;
-}
-.u-section-1 .u-container-layout-2 {
-  padding: 30px 20px;
-}
-.u-section-1 .u-text-3 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.u-section-1 .u-image-2 {
-  height: 222px;
-  margin-top: 17px;
   margin-bottom: 0;
   visibility: hidden;
 }
